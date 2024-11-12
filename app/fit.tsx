@@ -5,7 +5,7 @@ import { SafeAreaView } from 'react-native-safe-area-context'
 import { Ionicons } from '@expo/vector-icons';
 import { Octicons } from '@expo/vector-icons';
 import { useContext } from 'react';
-import { FitnessItems } from '@/context';
+import { FitnessItems } from '../context';
 
 
 const FitScreen = () => {

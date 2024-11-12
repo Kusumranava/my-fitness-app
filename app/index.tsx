@@ -4,9 +4,34 @@ import { LinearGradient } from 'expo-linear-gradient';
 import Animated, { FadeInDown } from 'react-native-reanimated';
 import { Image, View, Text, TouchableOpacity } from 'react-native';
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
+import { useEffect, useState } from 'react';
+import auth from '@react-native-firebase/auth';
 
 export default function index() {
+  const [initilizing,setInitializing]=useState(true);
+  const [user,setUser]=useState(null);
   const router = useRouter();
+  const op=(user)=>{
+    console.log(user)
+     setUser(user);
+     if(initilizing)setInitializing(false)
+  }
+  useEffect(()=>{
+const subscriber=auth().onAuthStateChanged(op)
+return subscriber;
+  },[])
+
+  const handleRediraction=()=>{
+    if(user!=null)
+    {
+      router.push({ pathname: '/home' })
+    }
+    else
+    {
+     router.push({ pathname: '/login' })
+    }
+   
+  }
   return (
     <>
       <View className="flex flex-1 items-center justify-end">
@@ -30,12 +55,12 @@ export default function index() {
 
           <Animated.View entering={FadeInDown.delay(200).springify()}>
             <TouchableOpacity
-              onPress={() => router.push({ pathname: '/home' })}
+              onPress={() =>handleRediraction()}
               style={{ height: hp(7), width: wp(85) }}
               className="mx-auto bg-[#9417c5] flex items-center justify-center rounded-full"
             >
               <Text style={{ fontSize: hp(3) }} className="font-bold text-center text-white">
-                Get Started
+                {initilizing ?"Loading" :"Get Started"}
               </Text>
             </TouchableOpacity>
           </Animated.View>

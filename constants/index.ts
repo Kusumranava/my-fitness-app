@@ -1,10 +1,4 @@
-export const sliderImages = [
-    require("../assets/images/slide1.png"),
-    require("../assets/images/slide2.png"),
-    require("../assets/images/slide3.png"),
-    require("../assets/images/slide4.png"),
-    require("../assets/images/slide5.png"),
-  ]
+
   
   export const meals = [
     {
@@ -292,3 +286,13 @@ export const sliderImages = [
       "target": "pectorals"
     }
   ]
+
+  export const LoginImage={
+    name: "back",
+    image: require("../assets/images/back.png"),
+  }
+
+  export const RegisterImage={
+    name: "back",
+    image: require("../assets/images/lowerArms.png"),
+  }

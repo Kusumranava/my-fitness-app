@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "834328082767",
+    "project_id": "my-fitness-app-34a1a",
+    "storage_bucket": "my-fitness-app-34a1a.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:834328082767:android:edeb47eb42710e204bed3a",
+        "android_client_info": {
+          "package_name": "com.collageproject.myfitnessapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "834328082767-7nkmter5tbqfqpm5crk5mr3dickb6k1u.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.collageproject.myfitnessapp",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "834328082767-29qoh0sri9ren2jfkk8ckemibt19hjup.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA_oRetL3838le_rNnvfieyeSZmMmZXKps"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "834328082767-29qoh0sri9ren2jfkk8ckemibt19hjup.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

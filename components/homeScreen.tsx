@@ -1,7 +1,7 @@
 import { Text, View, StyleSheet, ScrollView, TouchableOpacity } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { useContext, useState } from 'react';
-import { FitnessItems } from '@/context';
+import { FitnessItems } from '../context';
 import FitnessCards from './Fitness-Card';
 
 

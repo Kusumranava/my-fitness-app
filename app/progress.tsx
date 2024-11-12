@@ -1,6 +1,8 @@
 import React from 'react';
 import { FlatList, View, Text, StyleSheet } from 'react-native';
-
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import { useEffect, useState } from 'react';
+import { SafeAreaView } from 'react-native-safe-area-context';
 interface Workout {
     date: string;
     exercise: string;
@@ -54,9 +56,7 @@ const styles = StyleSheet.create({
 
 
 
-import AsyncStorage from '@react-native-async-storage/async-storage';
-import { useEffect, useState } from 'react';
-import { SafeAreaView } from 'react-native-safe-area-context';
+
 
 const ProgressScreen: React.FC = () => {
     const [workouts, setWorkouts] = useState<Workout[]>([]);

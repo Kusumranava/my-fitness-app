@@ -7,8 +7,8 @@ import Header from '../components/Header';
 import Progress from '../components/progress';
 import MealSchedule from '../components/meal-schedule';
 import BodyParts from '../components/body-parts';
-import HomeScreen from '@/components/homeScreen';
-import { Text } from '@/components/Themed';
+import HomeScreen from '../components/homeScreen';
+import { Text } from '../components/Themed';
 import { router } from 'expo-router';
 
 export default function Home() {

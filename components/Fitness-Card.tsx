@@ -2,7 +2,7 @@ import { Image, Text, View, TouchableOpacity } from 'react-native'
 
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
-import fitness from '@/constants/fitness';
+import fitness from '../constants/fitness';
 
 interface FitnessItem {
   image: string;

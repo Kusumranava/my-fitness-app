@@ -4,7 +4,7 @@ import { Ionicons } from '@expo/vector-icons';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useContext } from 'react';
 import { AntDesign } from '@expo/vector-icons';
-import { FitnessItems } from '@/context';
+import { FitnessItems } from '../context';
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
 
 type RouteParams = {
