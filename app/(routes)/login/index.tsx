@@ -16,8 +16,7 @@ const LoginScreen = () => {
     setLoading(true);
     try {
       await auth().signInWithEmailAndPassword(email, password);
-        router.push("/home
-          ")
+        router.push("/home")
     } catch (error) {
       alert(error);
     } finally {
