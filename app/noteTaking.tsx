@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, Button, ScrollView, StyleSheet } from 'react-native';
+import { View, Text, TextInput, Button, ScrollView, StyleSheet, TouchableOpacity } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useNavigation } from '@react-navigation/native';
 import { router } from 'expo-router';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import { Ionicons } from '@expo/vector-icons';
 
 interface Workout {
     exercise: string;
@@ -42,7 +43,14 @@ const NoteTaking: React.FC = () => {
 
     return (
         <SafeAreaView className="flex-1 bg-white px-5" edges={["top"]}>
-          
+            {/* Back Button */}
+            <TouchableOpacity
+                style={styles.backButton}
+                onPress={() => navigation.goBack()}
+            >
+                <Ionicons name="arrow-back" size={24} color="black" />
+            </TouchableOpacity>
+
             <ScrollView contentContainerStyle={styles.scrollContainer}>
                 <Text style={styles.title}>Workout Tracker</Text>
                 <TextInput
@@ -70,14 +78,11 @@ const NoteTaking: React.FC = () => {
             <View style={styles.bottomButton}>
                 <Button title="Check Your Progress" onPress={() => router.push('/progress')} />
             </View>
-       
         </SafeAreaView>
-       
     );
 };
 
 const styles = StyleSheet.create({
-   
     scrollContainer: {
         padding: 20,
     },
@@ -97,7 +102,15 @@ const styles = StyleSheet.create({
     },
     bottomButton: {
         padding: 20,
-       
+    },
+    backButton: {
+        position: 'absolute',
+        top: 20,
+        left: 10,
+        zIndex: 10,
+      
+        padding: 10,
+        borderRadius: 25,
     },
 });
 
