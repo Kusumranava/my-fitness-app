@@ -23,6 +23,7 @@ return subscriber;
 
   const handleRediraction=()=>{
     if(user!=null)
+      
     {
       router.push({ pathname: '/home' })
     }
