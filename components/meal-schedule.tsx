@@ -1,3 +1,4 @@
+import { router } from 'expo-router';
 import { meals } from '../constants';
 import { View, Text, Image, ScrollView, TouchableOpacity } from 'react-native';
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
@@ -7,7 +8,7 @@ export default function MealSchedule() {
     <View className="mt-6">
       <View className="mb-5 w-full flex items-center justify-between flex-row">
         <Text className="text-black font-semibold text-lg">Meal Schedule</Text>
-        <Text className="text-gray-500 font-medium text-sm">View All</Text>
+       <Text className="text-gray-500 font-medium text-sm" >View All</Text>
       </View>
       <ScrollView
         horizontal
